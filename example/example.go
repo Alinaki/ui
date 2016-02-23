@@ -15,6 +15,7 @@ func main() {
         box.Append(button, false)
         box.Append(greeting, false)
         window := ui.NewWindow("Hello", 200, 100, false)
+        window.SetMargined(true)
         window.SetChild(box)
         button.OnClicked(func(*ui.Button) {
             greeting.SetText("Hello, " + name.Text() + "!")
